@@ -149,8 +149,8 @@ numbersTwo.reverse();
 
 // Join all fruits with '-', convert to uppercase and log it
 
-console.log(fruits.join('-').toUpperCase()
+console.log(fruits.join('-').toUpperCase();
 
 // Join all fruits with '&', convert to lowercase and log it
 
-console.log(fruits.join('&').toLowerCase()
+console.log(fruits.join('&').toLowerCase();
