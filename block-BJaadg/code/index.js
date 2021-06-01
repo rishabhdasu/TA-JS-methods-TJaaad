@@ -24,13 +24,19 @@ console.log(`The index of first is in quote is ${quote.indexOf("is")}`);
   The character at index 3 is 'r'
   The character at index 4 is 'e'
   The character at index 5 is ' '
-*/
-console.log(`The character at index 0 is ${quote.charAt(0)}`);
+
+
+  console.log(`The character at index 0 is ${quote.charAt(0)}`);
 console.log(`The character at index 1 is ${quote.charAt(1)}`);
 console.log(`The character at index 2 is ${quote.charAt(2)}`);
 console.log(`The character at index 3 is ${quote.charAt(3)}`);
 console.log(`The character at index 4 is ${quote.charAt(4)}`);
 console.log(`The character at index 5 is ${quote.charAt(5)}`);
+*/
+
+for(let i = 0; i < 6; i++){
+  console.log(`The character at index ${i} is ${quote[i]}`);
+}
 
 /*
 5. Using the variable from , to and quote variable dispaly this message
@@ -60,7 +66,13 @@ let quoteSplitted = quote.split(" ");
 /*
 11. Change the word "today" in quoteSplitted to "tomorrow" and join all the words to form a sentance.
 */
-quoteSplitted.replace("today", "tomorrow");
+
+let index = quoteSplitted.replace("today");
+
+quoteSplitted[index] = "tomorrow";
+
+quoteSplitted.join(" ");
+
 /*
 12. Find the index of second "o" in quote. Use indexOf
 */
@@ -68,12 +80,11 @@ quote.indexOf("o", 10);
 /*
 13. Find the last index of letter "a" in quote.
 */
-let n = "a"
-console.log(quote.lastIndexOf(n));
+let lastIndexA = quote.lastIndexOf("a");
 /*
 14. Find the second last index of letter "a" in quote.
 */
-quote.lastIndexOf("a", 4);
+quote.lastIndexOf("a", lastIndexA - 1 );
 /*
 15. Make the quote 70 character long. If it has less characters add rest as .......
 Example: "Hello" (convert to 10 characters) => "Hello....."
@@ -101,7 +112,7 @@ to.replace("Stark", "Lannister");
 /*
 20. Make the quote of length 30 and put ... at the end. (use slice)
 */
-quote.slice(`...`, 30);
+let limit = quote.slice(0, 30) + "...";
 /*
 21. Find out does quote, from, to starts with "A"
 */
