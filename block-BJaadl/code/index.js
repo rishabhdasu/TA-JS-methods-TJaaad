@@ -39,7 +39,7 @@ words.indexOf("rhythm");
 
 // - Create a new array that contians words not starting with vowel.
 
-let noVovel = words.filter((w) => !vowel(w))[0];
+let noVovel = words.filter((w) => !vowel(w[0]));
 
 // - Create a new array that contianse words not ending with vowel
 
