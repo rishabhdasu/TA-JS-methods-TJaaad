@@ -14,11 +14,11 @@ let doubleNum = numbers.forEach(double);
 
 
 ```js
-let numbers = [100, 200, 33, 45, 65, 76, 51];
-function double(num) {
-  return num * 2;
-}
-let doubleNum = numbers.forEach(double);
+  let numbers = [100, 200, 33, 45, 65, 76, 51];
+  function double(num) {
+    return num * 2;
+  }
+  let doubleNum = numbers.forEach(double);
 ```
 
 ```js
