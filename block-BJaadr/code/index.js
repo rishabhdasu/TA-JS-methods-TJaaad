@@ -1,35 +1,95 @@
-// NOTE: You can only use the (reduce) array method to solve this exercise:
-
 function countAllPeople() {
-  // your code goes here
+  let count = got.houses.reduce((acc,cv)=>{
+   acc += cv.people.length;
+   return acc;
+ },0)
+ return count;
 }
 
 function peopleByHouses() {
-  // your code goes here
+ return got.houses.reduce((acc,cv) => {
+   acc[cv.name] = cv.people.length;
+   return acc;
+ },{})
 }
 
 function everyone() {
-  // your code goes here
+return got.houses.reduce((acc,cv) => {
+   acc.push(cv.people.map( n => {
+     return n.name;
+   }))
+   return acc;
+ },[])
 }
 
 function nameWithS() {
-  // your code goes here
+ let every = got.houses.reduce((acc,cv) => {
+     cv.people.forEach( n => {
+      if(n.name.toLowerCase().includes("s")){
+        acc.push(n.name);
+      }
+    })
+    return acc;
+  },[])   
+  return every
 }
 
+// function nameWithS() {
+ // got.houses.reduce((acc,cv) => {
+
+ // },[])
+// }
+
 function nameWithA() {
-  // your code goes here
+ return got.houses.reduce((acc,cv) =>{
+   cv.people.filter( p => {
+    if( p.name.toLowerCase().includes("a")){
+      acc.push(p.name)
+    }
+   })
+   return acc;
+ },[])
+ // return got.houses.reduce((acc,cv)=> {
+ //   cv.people.forEach(p =>{
+ //     if(p.name.toLowerCase().includes("a")){
+ //       acc.push(p.name)
+ //     }
+ //   })
+ //   return acc;
+ // },[])
 }
 
 function surnameWithS() {
-  // your code goes here
+return got.houses.reduce((acc,cv) => {
+   cv.people.filter( p => {
+     if(p.name.split(" ")[1].startsWith("S")){
+       acc.push(p.name)
+     }
+   })
+   return acc;
+ },[])
 }
 
 function surnameWithA() {
-  // your code goes here
+return got.houses.reduce((acc,cv) => {
+   cv.people.filter( p => {
+     if(p.name.split(" ")[1].startsWith("A")){
+       acc.push(p.name)
+     }
+   })
+  return acc
+ },[])
 }
 
 function peopleNameOfAllHouses() {
-  // your code goes here
+ return got.houses.reduce((acc,cv) => {
+   let arr = []
+   cv.people.forEach( p => {
+     arr.push(p.name)
+   })
+   acc[cv.name] = arr
+   return acc
+ },{})
 }
 
 // Testing your result after writing your function
